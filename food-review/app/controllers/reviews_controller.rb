@@ -31,7 +31,7 @@ class ReviewsController < ApplicationController
   # GET: /reviews/5
   get "/reviews/:id" do
      @review = Review.find_by(id: params[:id])
-     if @review 
+     if @review
        erb :"/reviews/show.html"
      else 
        redirect '/reviews'
@@ -47,7 +47,7 @@ class ReviewsController < ApplicationController
   # PATCH: /reviews/5
   patch "/reviews/:id" do
     @review = Review.find(params[:id])
-     if !params["reviews"]["title"].empty? && !params["reviews"]["review"].empty?
+     if !params["reviews"]["restaurant"].empty? && !params["reviews"]["review"].empty? 
       @review.update(params["reviews"])
       redirect "/reviews/#{params[:id]}"
     else
