@@ -1,10 +1,11 @@
-<h1>Restaurant Food Reviews!</h1>
-<a href="/reviews/new">Create a Review</a>
+<h1 style="font-size:50px">Daily Food Reviews!</h1>
+<button><a href="/reviews/new">Create a Review</a></button>
 <% @review.each do |r| %>
-<h2><a href="/reviews/<%=r.id%>"><%= r.restaurant%></a></h2>
-<label>Star Rating:</label>
-<%=r.star_rating%>
-<p><%= r.review%></p>
+<h2 style="font-family:'Times New Roman"><a href="/reviews/<%=r.id%>"><%= r.title%></a></h2>
+<h4 style="font-family:'Courier New'">Restaurant: "<%= r.restaurant%>"</h4>
+<h4 style="font-family:'Courier New'">Location: "<%=r.location%>"</h4>
+<h4 style="font-family:'Courier New'">Star Rating: <%= r.star_rating%></h4>
+<p style="font-family:'Courier New'"><%= r.review%></p>
 <img src="<%= r.image%>" alt="review">
 <% if current_user == r.user %>
 <button><a href="/reviews/<%=r.id%>/edit">Edit</a></button>

@@ -1,7 +1,12 @@
-<h1><%=@review.restaurant%></h1>
-<label>Star Rating:</label>
-<%=@review.star_rating%>
-<p><%=@review.review%></p>
+<h1 style="font-family:'Times New Roman"><%=@review.title%></h1>
+
+
+
+
+<h4 style="font-family:'Courier New'">Restaurant: "<%= @review.restaurant%>"</h4>
+<h4 style="font-family:'Courier New'">Location: "<%=@review.location%>"</h4>
+<h4 style="font-family:'Courier New'">Star Rating: <%= @review.star_rating%> out of 5!</h4>
+<body><p style="font-family:'Courier New'"><%=@review.review%></p></body>
 <img src="<%= @review.image%>" alt="review">
 <form action="/reviews/<%=@review.id%>" method="post">
   <input type="hidden" name="_method" value="delete">

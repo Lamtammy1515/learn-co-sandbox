@@ -1,12 +1,13 @@
 <h1>Create a Review</h1>
 <p><%=@error%></p>
 <form action="/reviews" method="post">
+   <label>Title:</label>
+  <input type="text" name="title">
   <label>Restaurant:</label>
-  </br>
   <input type="text" name="restaurant">
-  </br>
+  <label>Location:</label>
+  <input type="text" name="location">
   <label>Star Rating:</label>
-  </br>
   <input type="decimal" name="star_rating">  
   </br>
   <label>Review:</label>
@@ -19,5 +20,5 @@
   </br>
   </br>
   
-  <button type="submit">Add Review</button>
+  <button type="submit">Submit Review</button>
 </form>

@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200507001621) do
+ActiveRecord::Schema.define(version: 20200507220339) do
 
   create_table "reviews", force: :cascade do |t|
     t.string  "restaurant"
-    t.integer "star_rating"
+    t.decimal "star_rating"
     t.string  "review"
     t.string  "image",       default: "https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwOR5KlZ6BxGepLrLBY5RGSLMfhVtYU82r1zDptFj63p4"
     t.integer "user_id"
+    t.string  "title"
+    t.string  "location"
   end
 
   create_table "users", force: :cascade do |t|
