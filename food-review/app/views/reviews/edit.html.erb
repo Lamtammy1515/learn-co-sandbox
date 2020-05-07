@@ -1,0 +1,24 @@
+<h1>Edit Review for <%=@review.restaurant%></h1>
+<p><%=@error%></p>
+<form action="/reviews/<%=@review.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label>Restaurant:</label>
+  </br>
+  <input type="text" name="reviews[restaurant]" value="<%=@review.restaurant%>">
+  </br>
+  <label>Star Rating:</label>
+  </br>
+  <input type="decimal" name="reviews[star_rating]" value="<%=@review.star_rating%>">  
+  </br>
+  <label>Review:</label>
+  </br>
+  <textarea name="reviews[review]"><%= @review.review %>"></textarea>
+  </br>
+  <label>Image URL:</label>
+  </br>
+  <input type="text" name="reviews[image]" value="<%=@review.image%>">  
+  </br>
+  </br>
+  
+  <button type="submit">Edit Review</button>
+</form>
