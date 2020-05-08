@@ -4,7 +4,7 @@
 <h4 style="font-family:'Courier New'">Location: "<%=@review.location%>"</h4>
 <h4 style="font-family:'Courier New'">Star Rating: <%= @review.star_rating%> out of 5!</h4>
 <body><p style="font-family:'Courier New'"><%=@review.review%></p></body>
-<img src="<%= @review.image%>" alt="review">
+<img src="<%= @review.image%>" alt="review" class="center">
 <form action="/reviews/<%=@review.id%>" method="post">
   <input type="hidden" name="_method" value="delete">
   <% if @review.user == current_user %>
