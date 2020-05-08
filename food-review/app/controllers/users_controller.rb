@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-
   get '/' do 
     erb :index
   end 
@@ -20,6 +19,8 @@ class UsersController < ApplicationController
       erb:'/users/signup'
     end 
   end
+  
+  
 
 
 end
