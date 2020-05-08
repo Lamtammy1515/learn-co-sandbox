@@ -62,4 +62,5 @@ class ReviewsController < ApplicationController
     review.destroy
     redirect "/reviews"
   end
+  
 end
