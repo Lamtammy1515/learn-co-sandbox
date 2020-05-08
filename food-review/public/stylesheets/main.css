@@ -27,6 +27,7 @@
   }
 
 
+
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -62,13 +63,14 @@
 
 
 .header {
-  padding: 35px; /* some padding */
   text-align: center; /* center the text */
   background: lightpink; /* green background */
+  padding: 40px; /* some padding */
+  text-align: center; /* center the text */
   color: white; /* white text color */
 }
 
-/* Increase the font size of the <h1> element */
+
 .header h1 {
   font-size: 70px;
 }

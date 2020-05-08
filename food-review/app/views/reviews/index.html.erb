@@ -3,6 +3,7 @@
 <u><h1>The Daily Food Reviews!</h1></u> 
 </div>
 <div class="center">
+
 <% @review.each do |r| %>
 <h2 style="font-family:'Courier New'"><a href="/reviews/<%=r.id%>"><%= r.title%></a></h2>
 <h4 style="font-family:'Courier New'">Restaurant: "<%= r.restaurant%>"</h4>
