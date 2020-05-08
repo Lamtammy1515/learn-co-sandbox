@@ -2,9 +2,17 @@
 <p><%=@error%></p>
 <form action="/reviews/<%=@review.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
+  <label>Title:</label>
+  </br>
+   <input type="text" name="reviews[title]" value="<%=@review.title%>">
+   </br>
   <label>Restaurant:</label>
   </br>
   <input type="text" name="reviews[restaurant]" value="<%=@review.restaurant%>">
+  </br>
+  <label>Location:</label>
+  </br>
+  <input type="text" name="reviews[location]" value="<%=@review.location%>">
   </br>
   <label>Star Rating:</label>
   </br>
@@ -22,3 +30,4 @@
   
   <button type="submit">Edit Review</button>
 </form>
+
