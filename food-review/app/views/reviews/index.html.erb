@@ -1,5 +1,6 @@
-<div class="hello">
-<h1>Hello from The Daily Food Reviews!</h1>
+
+<div class="center">
+<h1 style="font-size:40px" class="welcome">The Daily Food Reviews!</h1>
 <button><a href="/reviews/new">Create a Review</a></button>
 <% @review.each do |r| %>
 <h2 style="font-family:'Courier New'"><a href="/reviews/<%=r.id%>"><%= r.title%></a></h2>
