@@ -39,20 +39,16 @@ Clone this repository
 In your terminal, type 'shotgun' to start the server.
 In your browser, visit: http://127.0.0.1:9393/ to visit the homepage.
 ### 
-Login as a User using any of the accounts:
-#### email: "toni@example.com", password:"toni"
-#### email: "test@example.com", password:"test"
-#### email: "user@example.com", password:"user"
-### 
-or as a restaurant using any of the accounts:
-### 
-#### email: "beulah@example.com", password: "beulah"
-#### email: "mantanah@example.com", password: "mantanah"
-#### email: "yosushy@example.com", password: "yosushy"
+Login as a User using this account as an example:
+#### name: "mickey", password:"mickey"
 
-Firstly login of signup as a User and create a new order.
-Log in as the restaurant you just created the order and see the new order in the "Orders" section.
-In any restaurant account you have the option to add, edit or delete any item that belongs to that restaurant.
+or Sign up with a name, email, and password:
+
+#SAMPLE #### name: "beulah" email: "beulah@example.com", password: "beulah"
+
+Firstly login or signup as a User and create a new review.
+Once you're logged in, you will be able to see all the lastest food reviews.
+You now have the option to add, edit or delete any review that belongs to you.
 
 ## Development
 
