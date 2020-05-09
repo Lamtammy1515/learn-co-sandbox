@@ -9,10 +9,6 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get "/" do
-    erb :welcome
-  end
-  
   def logged_in?
     !!current_user
   end 
