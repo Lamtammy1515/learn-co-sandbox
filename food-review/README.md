@@ -3,15 +3,15 @@
 
 Welcome ! 
 
-This is a web app created in Sinatra that simulates a website for food orders.
+This is a web app created in Sinatra that simulates a website for food reviews.
 
 ## Overview
 
 This web app has two interfaces:
 
-A Restaurant Interface: login, signup, see orders(recieved from users), create items (dishes), edit item, delete item.
+A Review Interface: create reviews, edit reviews, delete reviews.
 ### and
-A User Interface: login, signup, orders history, create new order, cancel order (available only for new orders).
+A User Interface: login, signup, orders history, create new review, delete that users review.
 
 ## Installation
 
