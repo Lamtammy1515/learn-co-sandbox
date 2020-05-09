@@ -9,7 +9,7 @@ This is a web app created in Sinatra that simulates a website for food reviews.
 
 This web app has two interfaces:
 
-A Review Interface: create reviews, edit reviews, delete reviews.
+A Review Interface: creates reviews, edits reviews, delete reviews.
 ### and
 A User Interface: login, signup, orders history, create new review, delete that users review.
 
@@ -17,7 +17,7 @@ A User Interface: login, signup, orders history, create new review, delete that 
 
 Clone this repository 
 #### In your terminal, run 'bundle install' to install all required gems.
-#### In your terminal, type 'rake db:seed' to fill up the database with 3 user accounts and 3 restaurants with 6 items on each.
+
 
 ## How to run the program
 
@@ -36,7 +36,6 @@ Clone this repository
 
 ## Usage
 
-In your terminal, type 'rake db:seed' to fill up the database with 3 user accounts and 3 restaurants with 6 items on each.
 In your terminal, type 'shotgun' to start the server.
 In your browser, visit: http://127.0.0.1:9393/ to visit the homepage.
 ### 
