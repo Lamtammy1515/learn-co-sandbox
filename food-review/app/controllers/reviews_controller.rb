@@ -19,7 +19,6 @@ class ReviewsController < ApplicationController
   post "/reviews" do
     filtered_params = params.reject{|key, value| key == "image" && value.empty?}
     review = current_user.review.create(filtered_params)
-    review.image = nil if review.image.empty? 
      if review.save
       redirect to '/reviews'
     else

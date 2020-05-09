@@ -17,7 +17,7 @@
   <img src="<%= r.image%>" alt="review" class="center">
   
   <% if current_user == r.user %>
-    <a href="/reviews/<%=r.id%>/edit">Edit</a>
+    <button><a href="/reviews/<%=r.id%>/edit">Edit</a></button>
     </div>
   <% end %>
   
