@@ -2,7 +2,7 @@
 
 
   get '/' do 
-    erb :index
+    erb :welcome
   end 
 
   get "/signup" do
@@ -12,7 +12,7 @@
   # POST: /users
   post "/signup" do
     user = User.new(params)
-    if !user.save
+    if user.save
       session[:user_id] = user.id 
       redirect '/reviews'
     else 
