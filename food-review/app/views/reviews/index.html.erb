@@ -1,29 +1,4 @@
-<<<<<<< HEAD
 
-
-<div class="header">
-<u><h1>The Daily Food Reviews!</h1></u> 
-</div>
-</br>
-</br>
-
-<% @review.each do |r| %>
-
-<div class="header2">
-  <h2 style="font-family:'Courier New'"><a href="/reviews/<%=r.id%>"><%= r.title%></a></h2>
-  </div>
-  
-<div class="center">
-  <h4 style="font-family:'Courier New'">Restaurant: "<%= r.restaurant%>"</h4>
-  <img src="<%= r.image%>" alt="review" class="center">
-  
-  <% if current_user == r.user %>
-    <button><a href="/reviews/<%=r.id%>/edit">Edit</a></button>
-    </div>
-  <% end %>
-  
-<%end%>
-=======
 
 <div class="header">
 <u><h1>The Daily Food Reviews!</h1></u> 
@@ -47,4 +22,4 @@
   <% end %>
   
 <%end%>
->>>>>>> 5b265d74572160dadfe3b497f7e4533b66521c1e
+
