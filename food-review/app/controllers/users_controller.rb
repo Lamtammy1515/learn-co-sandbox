@@ -8,7 +8,7 @@
     erb :'users/signup'
   end
 
-  # POST: /users
+
   post "/signup" do
     user = User.new(params)
     if user.save
