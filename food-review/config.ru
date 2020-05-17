@@ -10,5 +10,3 @@ use SessionsController
 use Rack::MethodOverride
 use ReviewsController
 
-
-

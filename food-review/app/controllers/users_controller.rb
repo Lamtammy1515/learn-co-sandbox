@@ -1,6 +1,5 @@
  class UsersController < ApplicationController
 
-
   get '/' do 
     erb :welcome
   end 
@@ -16,12 +15,9 @@
       session[:user_id] = user.id 
       redirect '/reviews'
     else 
-      @error = "Invalid Credentials."
+      @error = "Invalid. Please input name, email and password."
       erb :'users/signup'
     end 
   end
-  
-  
-
 
 end
