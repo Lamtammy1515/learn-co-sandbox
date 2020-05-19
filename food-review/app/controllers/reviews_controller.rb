@@ -22,7 +22,6 @@ class ReviewsController < ApplicationController
      if review.save
       redirect to '/reviews'
     else
-      @error = "Data invalid. Please try again."
       redirect to '/reviews/new'
     end
   end
@@ -46,11 +45,10 @@ class ReviewsController < ApplicationController
 
   patch "/reviews/:id" do
     @review = Review.find(params[:id])
-     if !params["reviews"]["restaurant"].empty? && !params["reviews"]["review"].empty? 
+     if !params["reviews"]["title"].empty? && !params["reviews"]["review"].empty? 
       @review.update(params["reviews"])
       redirect "/reviews/#{params[:id]}"
     else
-      @error = "Data invalid. Please try again."
       redirect to '/reviews/edit'
     end
   end
