@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
 
   post "/reviews" do
     filtered_params = params.reject{|key, value| key == "image" && value.empty?}
-    review = current_user.review.create(filtered_params)
+    review = current_user.reviews.create(filtered_params)
      if review.save
       redirect to '/reviews'
     else
