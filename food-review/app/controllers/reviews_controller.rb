@@ -37,14 +37,19 @@ class ReviewsController < ApplicationController
   end
 
 
+
   get "/reviews/:id/edit" do
-    @review = Review.find(params[:id])
-    erb :"/reviews/edit.html"
+    @review = Review.find_by_id(params[:id])
+    if logged_in? && current_user.reviews.include?(@review)
+      erb :'/reviews/edit.html'
+    else
+      redirect to "/reviews/#{@review.id}"
+    end
   end
 
 
   patch "/reviews/:id" do
-    @review = Review.find(params[:id])
+    @review = Review.find_by_id(params[:id])
      if !params["reviews"]["title"].empty? && !params["reviews"]["review"].empty? 
       @review.update(params["reviews"])
       redirect "/reviews/#{params[:id]}"
@@ -55,9 +60,13 @@ class ReviewsController < ApplicationController
 
  
   delete "/reviews/:id" do
-    review = Review.find(params[:id])
-    review.destroy
-    redirect "/reviews"
+    @review = Review.find_by_id(params[:id])
+    if logged_in? && current_user.concerts.include?(@review)
+      @review.destroy
+      redirect to "/reviews"
+    else
+      redirect to "/reviews/#{@review.id}"
+    end
   end
   
 end

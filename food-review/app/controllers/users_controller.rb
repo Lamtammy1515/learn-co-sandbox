@@ -1,6 +1,5 @@
  class UsersController < ApplicationController
-
-  get '/' do 
+ get '/' do 
     erb :welcome
   end 
 

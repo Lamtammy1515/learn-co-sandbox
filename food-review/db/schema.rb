@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200507220339) do
+ActiveRecord::Schema.define(version: 20200602230459) do
 
   create_table "reviews", force: :cascade do |t|
     t.string  "restaurant"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20200507220339) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
   end
 
 end
