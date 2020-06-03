@@ -40,7 +40,7 @@ In your terminal, type 'shotgun' to start the server.
 In your browser, visit: http://127.0.0.1:9393/ to visit the homepage.
 ### 
 Login as a User using this account as an example:
-#### name: "Sunshinelam015", password:"Sunshinelam"
+#### name: "tammylam", password:"tammylam"
 
 or Sign up with a name, email, and password:
 
