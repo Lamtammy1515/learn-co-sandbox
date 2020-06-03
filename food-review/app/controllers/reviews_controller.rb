@@ -61,8 +61,8 @@ class ReviewsController < ApplicationController
  
   delete "/reviews/:id" do
     @review = Review.find_by_id(params[:id])
-    if logged_in? && current_user.concerts.include?(@review)
-      @review.destroy
+    if logged_in? && current_user.reviews.include?(@review)
+      @review.delete
       redirect to "/reviews"
     else
       redirect to "/reviews/#{@review.id}"
