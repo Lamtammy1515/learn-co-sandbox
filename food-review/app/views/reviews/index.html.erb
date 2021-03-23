@@ -12,7 +12,11 @@
   
 
   <h4 style="font-family:'Courier New'" class="center">Restaurant: "<%= r.restaurant%>"</h4>
-  <img src="<%= r.image%>" alt="review" class="center">
+
+  
+    <h4 style="font-family:'Courier New'" class="center">Author: "<%= r.user.try(:name) %>"</h4>
+ <img src="<%= r.image%>" alt="review" class="center">
+  
   
   <% if current_user == r.user %>
     <button class="center"><a href="/reviews/<%=r.id%>/edit">Edit</a></button>

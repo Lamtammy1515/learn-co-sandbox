@@ -40,16 +40,15 @@ class ReviewsController < ApplicationController
 
   get "/reviews/:id/edit" do
     @review = Review.find_by_id(params[:id])
-    if logged_in? && current_user.reviews.include?(@review)
+    redirect_if_not_allowed
       erb :'/reviews/edit.html'
-    else
-      redirect to "/reviews/#{@review.id}"
-    end
   end
 
 
   patch "/reviews/:id" do
     @review = Review.find_by_id(params[:id])
+    redirect_if_not_allowed
+       
      if !params["reviews"]["title"].empty? && !params["reviews"]["review"].empty? 
       @review.update(params["reviews"])
       redirect "/reviews/#{params[:id]}"
@@ -61,12 +60,18 @@ class ReviewsController < ApplicationController
  
   delete "/reviews/:id" do
     @review = Review.find_by_id(params[:id])
-    if logged_in? && current_user.reviews.include?(@review)
+    redirect_if_not_allowed
       @review.delete
       redirect to "/reviews"
-    else
-      redirect to "/reviews/#{@review.id}"
-    end
   end
+  
+  
+  private 
+  
+  def redirect_if_not_allowed 
+     if !logged_in? || !current_user.reviews.include?(@review)
+         redirect to "/reviews/#{@review.id}"
+       end 
+  end 
   
 end
